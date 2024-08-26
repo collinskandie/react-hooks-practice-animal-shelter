@@ -18,7 +18,7 @@ test("calls the `onChangeType` prop callback when the animal type select changes
 test('calls the `onFindPetsClick` callback prop when the "Find pets" button is clicked', () => {
   const onFindPetsClick = jest.fn();
   render(<Filters onFindPetsClick={onFindPetsClick} filters={FILTERS_STATE} />);
-  const button = screen.queryByText(/Find pets/g);
+  const button = screen.queryByText(/Find pets/);
   fireEvent.click(button);
   expect(onFindPetsClick).toHaveBeenCalled();
 });
